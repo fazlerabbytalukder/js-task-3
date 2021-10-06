@@ -1,0 +1,135 @@
+body{
+    background-color: #F2F4F9;
+}
+.shop-container{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.products-container{
+    margin-right: 10px;
+}
+
+.search{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 2px 5px 10px 0px #d6d7da;
+    border-radius: 3px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(7 ,1fr);
+    grid-gap: 10px;
+    margin-bottom: 90px;
+}
+
+.single-product img{
+    width: 80px;
+}
+
+.single-product{
+    box-shadow: 2px 5px 10px 0px #d6d7da;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card-img{
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+    padding: 5px;
+}
+
+.products-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cart-container{
+    background-color: white;
+    box-shadow: 2px 5px 10px 0px #d6d7da;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.cart-heading{
+    color: #7872B9;
+}
+
+.fa-user{
+    margin: 0 7px;
+}
+
+.single-cart-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    margin: 0 7px;
+    box-shadow: 2px 3px 5px 0px #d6d7da;
+    border-radius: 5px;
+}
+
+.single-cart-product img{
+    width: 40px;
+}
+
+.product-calculation{
+    margin: 0 10px;
+    margin-top: 90px;
+}
+
+.discount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tax{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay-button{
+    width: 100%;
+    background-color: #7872b9;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
