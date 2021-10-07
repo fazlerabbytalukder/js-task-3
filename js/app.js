@@ -114,10 +114,33 @@ function addCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText;
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText;
     var imageSrc = shopItem.getElementsByClassName('shop-item-img')[0].src;
-    console.log(title,price,imageSrc);
+    addItemToCart(title, price, imageSrc)
+    updateCartTotal();
 }
 
-
+function addItemToCart(title, price, imageSrc) {
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('cart-row')
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    var cartItemName = cartItems.getElementsByClassName('cart-item-name');
+    for (var i = 0; i < cartItemName.length; i++){
+        if (cartItemName[i].innerText == title) {
+            alert('This Item is already added to the cart')
+            return;
+        }
+    }
+    var cartRowContains = `
+                        <div class="card-item">
+                            <img src=${imageSrc} alt="">
+                            <p class="cart-item-name">${title}</p>
+                            <p class="cart-price">BDT ${price}</p>
+                            <i class="fas fa-trash-alt remove-btn"></i>
+                        </div>
+    `
+    cartRow.innerHTML = cartRowContains;
+    cartItems.append(cartRow);
+    cartRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeCartItem);
+}
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
