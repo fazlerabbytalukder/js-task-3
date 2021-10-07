@@ -46,6 +46,11 @@ body{
     padding: 5px;
 }
 
+.add-to-cart-button button{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 .products-footer{
     display: flex;
     justify-content: space-between;
@@ -80,7 +85,7 @@ body{
     margin: 0 7px;
 }
 
-.single-cart-product{
+.card-item{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +95,7 @@ body{
     border-radius: 5px;
 }
 
-.single-cart-product img{
+.card-item img{
     width: 40px;
 }
 
