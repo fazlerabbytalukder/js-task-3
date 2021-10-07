@@ -1,3 +1,4 @@
+// if page page not load the function not work as i use script in header part. if load properly the ready function call
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -6,12 +7,14 @@ if (document.readyState == 'loading') {
 
 
 function ready() {
+    // remove cart item
     var removeCartItemButton = document.getElementsByClassName('remove-btn');
     for (var i = 0; i < removeCartItemButton.length; i++) {
         var button = removeCartItemButton[i];
         button.addEventListener('click', removeCartItem)
     }
 
+    //add card item to the cart
     var addToCartButton = document.getElementsByClassName('add-to-cart-button');
     for (var i = 0; i < addToCartButton.length; i++){
         var button = addToCartButton[i];
@@ -19,6 +22,7 @@ function ready() {
     }
 }
 
+// remove cart item function
 function removeCartItem(event) {
     var buttonClicked = event.target;
     var buttonPrice = buttonClicked.parentElement;
@@ -28,6 +32,8 @@ function removeCartItem(event) {
     
 }
 
+
+//add item to the cart. when click add cart button
 function addCartClicked(event) {
     var button = event.target;
     var shopItem = button.parentElement.parentElement;
@@ -38,6 +44,8 @@ function addCartClicked(event) {
     updateCartTotal();
 }
 
+
+//add item cart design and here use dynamic value
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div');
     cartRow.classList.add('cart-row')
@@ -62,6 +70,7 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeCartItem);
 }
 
+//update total price before delete any item to the cart
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
@@ -77,7 +86,7 @@ function updateCartTotal() {
     document.getElementsByClassName('sub-total-price')[0].innerText = 'BDT' + total;
 }
 
-
+//after delete any cart element update price
 function afterDeleteTotalPrice(cartPrice) {
     var totalPrice = parseFloat(document.getElementsByClassName('cart-total-price')[0].innerText.replace('BDT', ''));
     totalPrice = totalPrice - cartPrice;

@@ -1,6 +1,11 @@
 body{
     background-color: #F2F4F9;
 }
+
+
+/* ------------------
+    shop container part
+--------------------- */
 .shop-container{
     display: grid;
     grid-template-columns: 5fr 2fr;
@@ -47,7 +52,7 @@ body{
 }
 
 .add-to-cart-button button{
-    margin-left: 10px;
+    margin-left: 20%;
     margin-bottom: 5px;
 }
 
@@ -58,17 +63,9 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* ------------------
+    cart design part
+--------------------- */
 
 .cart-container{
     background-color: white;
